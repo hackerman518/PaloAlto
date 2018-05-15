@@ -362,14 +362,20 @@
           "imageOffer": {
             "value": "[variables('imageOffer')]"
           },
-  	 "imageVersion": {
+          "imageVersion": {
             "value": "[parameters('imageVersion')]"
           },
           "imagePublisher": {
             "value": "[variables('imagePublisher')]"
           },
-          "nicName": {
-            "value": "[variables('nicName')]"
+          "nic1Name": {
+            "value": "[variables('nic1Name')]"
+          },
+          "nic2Name": {
+            "value": "[variables('nic2Name')]"
+          },
+          "nic3Name": {
+            "value": "[variables('nic3Name')]"
           },
           "vmSize": {
             "value": "[parameters('vmSize')]"
@@ -386,9 +392,9 @@
           "sshKey": {
             "value": "[parameters('sshKey')]"
           },
-        "availabilitySetName": {
-          "value": "[parameters('availabilitySetName')]"
-        }
+          "availabilitySetName": {
+            "value": "[parameters('availabilitySetName')]"
+          }
         }
       }
     }
