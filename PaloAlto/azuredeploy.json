@@ -3,13 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         
-        "newStorageAccount": {
-            "type": "string",
-            "metadata": {
-                "description": "Globally unique lowercase name of your storage account"
-            }
-        },
-        "storageAccountType": {
+           "storageAccountType": {
             "type": "string",
           "metadata": {
             "description": "The type of the Storage Account created"
@@ -192,33 +186,7 @@
     "vmTemplateUrl": "[concat(variables('baseUrl'), '/virtual-machine-', parameters('authenticationType'),'.json')]"
   },
     "resources": [
-    {
-	"name": "storageAcountSetup1",
-	"type": "Microsoft.Resources/deployments",
-        "apiVersion": "2015-01-01",
-	"properties" : {
-		"mode": "Incremental",
-		"templateLink" : {
-		"uri" : "[variables('storageAccountSetupURL')]",
-		"contentVersion": "1.0.0.0"
-	},
-	"parameters" : {
-    "location": {
-      "value": "[resourceGroup().location]"
-    },
-		"storageAccountType": {
-			"value": "[parameters('storageAccountType')]"
-		},
-		"newStorageAccount" : {
-			"value": "[parameters('newStorageAccount')]"
-		},
-		"storageAccountExistingRG": {
-			"value": "[parameters('existingStorageAccountRG')]"
-		}
-	  }
-        }
-    },
-    {
+      {
       "apiVersion": "2017-12-01",
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('availabilitySetName')]",
@@ -359,10 +327,7 @@
           "adminPassword": {
             "value": "[parameters('adminPassword')]"
           },
-          "newStorageAccount": {
-            "value": "[parameters('newStorageAccount')]"
-          },
-          "sshKey": {
+            "sshKey": {
             "value": "[parameters('sshKey')]"
           },
           "availabilitySetName": {
