@@ -33,10 +33,7 @@
     <Content Include="Deploy-AzureResourceGroup.ps1" />
     <None Include="metadata.json" />
     <None Include="README.md" />
-    <None Include="storageAccount-existing.json" />
-    <None Include="storageAccount-new.json" />
     <None Include="virtual-machine-password.json" />
-    <None Include="virtual-machine-sshPublicKey.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>

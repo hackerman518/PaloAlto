@@ -30,24 +30,7 @@
                 "description": "Password for VM-Series administrator"
             }
         },
-        "authenticationType": {
-            "type": "string",
-            "metadata": {
-                "descritpion": "Type of authentication "
-            },
-            "allowedValues": [
-                "sshPublicKey",
-                "password"
-            ],
-            "defaultValue": "password"
-        },
-        "sshKey": {
-            "type": "string",
-            "defaultValue": "",
-            "metadata": {
-                "description": "SSH rsa public key file as a string."
-            }
-        },
+       
         "imageVersion": {
             "type": "string",
             "defaultValue": "latest",
