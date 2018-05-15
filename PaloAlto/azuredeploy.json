@@ -133,13 +133,14 @@
             },
             "defaultValue": "0.0.0.0/0"
         },
-        "baseUrl" : {
-		"type" : "string",
-		"metadata": {
-			"artifactsBaseUrl": ""
-		},
-		"defaultValue": "https://raw.githubusercontent.com/PaloAltoNetworks/azure/master/vmseries-avset"
-	},
+      "baseUrl": {
+        "type": "string",
+        "metadata": {
+          "artifactsBaseUrl": ""
+        },
+        "defaultValue": null,
+        "https": "https://github.com/wvanbesien/PaloAlto/blob/master/PaloAlto/"
+      },
     "virtualNetworkName": {
       "type": "string",
       "metadata": {
