@@ -139,8 +139,8 @@
           "artifactsBaseUrl": ""
         },
         "defaultValue": null,
-        "https": "https://raw.github.com/wvanbesien/PaloAlto/blob/master/PaloAlto/",
-         },
+        "https": "https://raw.githubusercontent.com/wvanbesien/PaloAlto/master/PaloAlto"
+      },
     "virtualNetworkName": {
       "type": "string",
       "metadata": {
