@@ -12,7 +12,7 @@ Note: Make sure to set a strong password for the firewall and set the SRCIPINBOU
 
 This template is meant to let you do customized deployments of VM-Series instead of deploying from the Azure Marketplace. You can deploy using the "Deploy to Azure" button below or download the template and customize it to your needs. You can also fork the templates into your own GitHub repository.
 
-[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%A%2F%2Fgithub.com%2Fwvanbesien%2FPaloAlto%2Fblob%2Fmaster%2FPaloAlto%2Fazuredeploy.json)
+[<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Fwvanbesien%2FPaloAlto%2Fblob%2Fmaster%2FPaloAlto%2Fazuredeploy.json)
 
 ## Deploy ARM Template using Azure CLI in ARM mode
 
