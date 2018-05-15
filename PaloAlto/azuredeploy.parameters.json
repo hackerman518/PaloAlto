@@ -2,12 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01-preview/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-         "newStorageAccount": {
-            "type": "string",
-            "metadata": {
-                "description": "Globally unique lowercase name of your storage account"
-            }
-        },
+        
         "storageAccountType": {
             "type": "string",
 	    "metadata": {
@@ -15,30 +10,7 @@
 	    },
 	    "defaultValue":"Standard_LRS"
 	},
-        "storageAccountNewOrExisting" : {
-            "type": "string",
-            "defaultValue" : "new",
-            "allowedValues" : [
-                "new",
-                "existing"
-            ],
-            "metadata": {
-                "Description": "Indicates whether the Storage Account is new or existing"
-            }
-        },
-        "existingStorageAccountRG": {
-            "type": "string",
-            "defaultValue" : "",
-            "metadata": {
-               "description": "Storage Resource Group of the Existing VM."
-            }
-        },
-        "dnsNameForPublicIP": {
-            "type": "string",
-            "metadata": {
-                "description": "Globally unique DNS name to access management interface of VM-Series firewall"
-            }
-        },
+        
         "vmName": {
             "type": "string",
             "metadata": {
@@ -101,15 +73,6 @@
         },
 	"vmSize": {
             "type": "string",
-            "allowedValues": [
-                "Standard_D3",
-		"Standard_D3_v2",
-                "Standard_D4", 
-		"Standard_D4_v2",
-		"Standard_D5",
-	  	"Standard_D5_v2"
-                "Standard_A4"		    
-            ],
             "metadata": {
                 "description": "Azure VM size for VM-Series"
             }
@@ -121,12 +84,7 @@
                 "description": "Azure Availability Set for VM-Series firewalls"
             }
         },
-        "srcIPInboundNSG": {
-            "type": "string",
-            "metadata": {
-                "description": "Your source public IP address. Added to the inbound DefaultNSG on eth0 (MGMT)"
-            }
-        },
+        
     
     "virtualNetworkName": {
       "type": "string",
@@ -135,13 +93,7 @@
       },
       "defaultValue": "panVnet"
     },
-    "virtualNetworkAddressPrefix": {
-      "type": "string",
-      "defaultValue": "192.168.0.0/16",
-      "metadata": {
-        "description": "Virtual network address CIDR"
-      }
-    },
+    
     "subnet0Name": {
       "type": "string",
       "defaultValue": "Mgmt",
@@ -163,27 +115,7 @@
         "description": "Subnet for the Trust"
       }
     },
-    "subnet0Prefix": {
-      "type": "string",
-      "defaultValue": "192.168.0.0/24",
-      "metadata": {
-        "description": "Mgmt subnet CIDR"
-      }
-    },
-    "subnet1Prefix": {
-      "type": "string",
-      "defaultValue": "192.168.1.0/24",
-      "metadata": {
-        "description": "Untrust subnet CIDR"
-      }
-    },
-    "subnet2Prefix": {
-      "type": "string",
-      "defaultValue": "192.168.2.0/24",
-      "metadata": {
-        "description": "Trust subnet CIDR"
-      }
-    },
+    
     "subnet0StartAddress": {
       "type": "string",
       "defaultValue": "192.168.0.4",
