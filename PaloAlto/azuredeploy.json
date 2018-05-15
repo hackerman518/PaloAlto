@@ -255,7 +255,7 @@
       "location": "[resourceGroup().location]"
     },
       {
-        "apiVersion": "[variables('apiVersion')]",
+        "apiVersion": "2018-02-01",
         "type": "Microsoft.Network/networkInterfaces",
         "name": "[variables('Nic1Name')]",
         "location": "[resourceGroup().location]",
@@ -280,7 +280,7 @@
         }
       },
       {
-        "apiVersion": "[variables('apiVersion')]",
+        "apiVersion": "2018-02-01",
         "type": "Microsoft.Network/networkInterfaces",
         "name": "[variables('Nic2Name')]",
         "location": "[resourceGroup().location]",
@@ -307,7 +307,7 @@
         }
       },
       {
-        "apiVersion": "[variables('apiVersion')]",
+        "apiVersion": "2018-02-01",
         "type": "Microsoft.Network/networkInterfaces",
         "name": "[variables('Nic3Name')]",
         "location": "[resourceGroup().location]",
