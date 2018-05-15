@@ -133,15 +133,7 @@
             },
             "defaultValue": "0.0.0.0/0"
         },
-      "baseUrl": {
-        "type": "string",
-        "metadata": {
-          "artifactsBaseUrl": ""
-        },
-        "defaultValue": null,
-        "https": "https://raw.githubusercontent.com/wvanbesien/PaloAlto/master/PaloAlto"
-      },
-    "virtualNetworkName": {
+      "virtualNetworkName": {
       "type": "string",
       "metadata": {
         "description": "Name of the virtual network that the consumer wants to use"
@@ -219,23 +211,24 @@
       }
     }
     },
-    "variables": {
-        "apiVersion": "2015-06-15",
-        "imagePublisher": "paloaltonetworks",
-	"imageOffer" : "vmseries1",
-        "fwpublicIPName": "[concat(parameters('vmName'), '-fwMgmtPublicIP')]",
-        "nicName": "[concat(parameters('vmName'), '-eth')]",
-        "FWPrivateIPAddressUntrust": "[parameters('subnet1StartAddress')]",
-        "FWPrivateIPAddressTrust": "[parameters('subnet2StartAddress')]",
-        "publicIPAddressType": "Dynamic",
-        "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
-        "nsgname-mgmt": "[concat(parameters('vmName'), '-DefaultNSG')]",
-        "subnet0Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet0Name'))]",
-        "subnet1Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet1Name'))]",
-        "subnet2Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet2Name'))]",
-	"storageAccountSetupURL" : "[concat(parameters('baseUrl'),'/storageAccount-',parameters('storageAccountNewOrExisting'),'.json')]",
-	"vmTemplateUrl": "[concat(parameters('baseUrl'), '/virtual-machine-', parameters('authenticationType'),'.json')]"
-    },
+  "variables": {
+    "apiVersion": "2015-06-15",
+    "imagePublisher": "paloaltonetworks",
+    "baseUrl": "https://raw.githubusercontent.com/wvanbesien/PaloAlto/master/PaloAlto",
+    "imageOffer": "vmseries1",
+    "fwpublicIPName": "[concat(parameters('vmName'), '-fwMgmtPublicIP')]",
+    "nicName": "[concat(parameters('vmName'), '-eth')]",
+    "FWPrivateIPAddressUntrust": "[parameters('subnet1StartAddress')]",
+    "FWPrivateIPAddressTrust": "[parameters('subnet2StartAddress')]",
+    "publicIPAddressType": "Dynamic",
+    "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
+    "nsgname-mgmt": "[concat(parameters('vmName'), '-DefaultNSG')]",
+    "subnet0Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet0Name'))]",
+    "subnet1Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet1Name'))]",
+    "subnet2Ref": "[concat(variables('vnetID'),'/subnets/',parameters('subnet2Name'))]",
+    "storageAccountSetupURL": "[concat(variables('baseUrl'),'/storageAccount-',parameters('storageAccountNewOrExisting'),'.json')]",
+    "vmTemplateUrl": "[concat(variables('baseUrl'), '/virtual-machine-', parameters('authenticationType'),'.json')]"
+  },
     "resources": [
     {
 	"name": "storageAcountSetup1",
