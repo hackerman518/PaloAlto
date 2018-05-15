@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "PaloAlto", "PaloAlto\PaloAlto.deployproj", "{5D482778-259B-40B1-8FA3-04504EDFE180}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D482778-259B-40B1-8FA3-04504EDFE180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D482778-259B-40B1-8FA3-04504EDFE180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D482778-259B-40B1-8FA3-04504EDFE180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D482778-259B-40B1-8FA3-04504EDFE180}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7545218-1D1D-4689-B595-65E8E1EA3780}
+	EndGlobalSection
+EndGlobal
